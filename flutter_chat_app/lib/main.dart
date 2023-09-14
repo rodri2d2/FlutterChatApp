@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_app/config/themes/app_theme.dart';
+import 'package:flutter_chat_app/views/chat/chat_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,15 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedColor: 6).theme(),
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: const ChatView(),
     );
   }
 }
